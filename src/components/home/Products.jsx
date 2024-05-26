@@ -1,18 +1,21 @@
+/* eslint-disable react/prop-types */
+import React from 'react';
+
 import SingleProduct from "./SingleProduct";
 
-const Products=()=>{
-    return (
-        <div >
-
-       <h1 className="my-8 text-2xl font-bold text-center">Our Products</h1> 
-            <div className="flex gap-2">
-                <SingleProduct/>
-                 <SingleProduct/>
-                 <SingleProduct/>
-            </div>
-        </div>
-
-    );
+const Products = ({ data }) => {
+  return (
+    <div>
+      <h1 className="my-8 text-2xl font-bold text-center">Our Products</h1>
+      <div className="flex gap-2">
+        {data.slice(0,3).map((shoe) => (
+          <SingleProduct key={shoe.id} shoe={shoe} />
+        ))}
+      </div>
+    </div>
+  );
 };
+
+
 
 export default Products;

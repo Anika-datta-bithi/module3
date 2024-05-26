@@ -13,8 +13,12 @@ const SingleProducts=({shoe})=>{
      <p>{description}</p>
     <p>If a dog chews shoes whose shoes does he choose?</p>
     <div className="card-actions justify-end">
-      <button className="btn btn-primary">
+      <button className="btn bg-indigo-500 text-white">
         <Link to={`/products/${id}`}>See Details</Link></button>
+        <button className="btn bg-green-600 text-white">
+        <Link to={`/products/${id}`}>Edit</Link></button>
+        <button className="btn bg-red-500 text-white">
+        <Link to={`/products/${id}`}>Delete</Link></button>
     </div>
   </div>
 </div>
